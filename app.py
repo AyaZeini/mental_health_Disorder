@@ -115,11 +115,13 @@ if menu_id == 'Overview':
     col = st.columns(2)
 
     with col[0]:
+        min=merged_df['year'].min()
+        max=merged_df['year'].max()
         selected_year = st.slider(
             'Select Year',
-            min_value=merged_df['year'].min(),
-            max_value=merged_df['year'].max(),
-            value=merged_df['year'].min(),
+            min_value=min,
+            max_value=max,
+            value=min,
             step=1,
             key='year_slider',
             help='Drag the slider to change the year'
