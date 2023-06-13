@@ -115,19 +115,14 @@ if menu_id == 'Overview':
     col = st.columns(2)
 
     with col[0]:
-        min_year = merged_df['year'].min()
-        max_year = merged_df['year'].max()
         selected_year = st.slider(
             'Select Year',
-            min_value=min_year,
-            max_value=max_year,
-            value=min_year,
+            min_value=1990,
+            max_value=2019,
+            value=(1990, 2019),
             step=1,
-            key='year_slider',
             help='Drag the slider to change the year'
         )
-        selected_year = int(selected_year)
-
 
     with col[1]:
         all_countries_option = 'All Countries'
