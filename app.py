@@ -43,7 +43,7 @@ merged_df=pd.merge(merged_df, df4, on=['country', 'code', 'year'])
 menu_data = [
 {'label':"Home", 'icon': "bi bi-house"},
 {'label':"Overview", 'icon': "bi bi-graph-up-arrow"},
-{'label':'DALY', 'icon' : "bi bi-graph-up-arrow"}
+{'label':'Disease Burden', 'icon' : "bi bi-graph-up-arrow"}
 ]
 
 # Set the Navigation Bar
@@ -322,7 +322,7 @@ if menu_id == 'Overview':
 
 
 
-if menu_id == 'DALY':
+if menu_id == 'Disease Burden':
 
     col=st.columns(2)
 
