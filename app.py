@@ -356,9 +356,9 @@ if menu_id == 'Disease Burden':
     with col[0]:
         selected_year = st.slider(
             'Select Year',
-            min_value=df5['year'].min(),
-            max_value=df5['year'].max(),
-            value=df5['year'].min(),
+            min_value=1990,
+            max_value=2019,
+            value=1990,
             step=1,
             key='year_slider',
             help='Drag the slider to change the year'
