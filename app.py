@@ -115,23 +115,16 @@ if menu_id == 'Overview':
     col = st.columns(2)
 
     with col[0]:
-        # Create the Streamlit app
-        def main():
-            # Display the slider
-            selected_year = st.slider(
-                'Select Year',
-                min_value=merged_df['year'].min(),
-                max_value=merged_df['year'].max(),
-                value=merged_df['year'].min(),
-                step=1,
-                help='Drag the slider to change the year'
-            )
-
-            st.write("Selected Year:", selected_year)
-
-        # Run the app
-        if __name__ == "__main__":
-            main()
+        selected_year = st.slider(
+            'Select Year',
+            min_value=merged_df['year'].min(),
+            max_value=merged_df['year'].max(),
+            value=merged_df['year'].min(),
+            step=1,
+            key='year_slider',
+            help='Drag the slider to change the year'
+        )
+        selected_year = int(selected_year)
 
     with col[1]:
         all_countries_option = 'All Countries'
