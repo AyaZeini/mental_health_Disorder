@@ -119,8 +119,9 @@ if menu_id == 'Overview':
             'Select Year',
             min_value=1990,
             max_value=2019,
-            value=(1990, 2019),
+            value=1990,
             step=1,
+            key='year_slider',
             help='Drag the slider to change the year'
         )
 
